@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
         value: '0000',
         theme: 'train-station',
         format: '(,ddd)',  // This format will prevent the comma after the thousandth place
+        duration: 1000  // Set animation duration to 1 second (1000 milliseconds)
     });
 
     function generateRandomNumber() {
@@ -81,9 +82,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updateOdometer() {
+        // Immediately clear the events container
+        const eventsContainer = document.getElementById('events');
+        eventsContainer.innerHTML = '';
+
         const randomNumber = generateRandomNumber();
         odometer.update(padNumber(randomNumber));
-        fetchEventsForYear(randomNumber);
+        
+        // Wait for the odometer animation to complete before fetching events
+        setTimeout(() => {
+            fetchEventsForYear(randomNumber);
+        }, 1000); // 1000ms = 1s, matching the odometer animation duration
     }
 
     // Generate initial random number and fetch events
