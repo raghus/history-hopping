@@ -1,0 +1,79 @@
+body {
+    font-family: 'Economica', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 90%;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 70px;  /* Increased from 2.8rem */
+    font-weight: 900;  /* Increased from 700 for extra boldness */
+    letter-spacing: 2px;  /* Optional: improves readability for the larger size */
+}
+
+.odometer {
+    font-family: 'Economica', sans-serif !important;
+    font-size: 7rem;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+button {
+    font-family: 'Economica', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 12px 24px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto 30px;
+    background-color: #e0e0e0;  /* Pale gray color */
+    border: none;
+    color: #333;  /* Dark gray text for contrast */
+    border-radius: 4px;  /* Slightly rounded corners */
+    transition: background-color 0.3s ease;  /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #d0d0d0;  /* Slightly darker on hover */
+}
+
+.events-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.event {
+    width: 250px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-size: 1.25rem;  /* Increased from 1rem (25% bigger) */
+    text-align: left;
+}
+
+.event:nth-child(1) { background-color: #FFE5E5; }
+.event:nth-child(2) { background-color: #E5FFE5; }
+.event:nth-child(3) { background-color: #E5E5FF; }
+.event:nth-child(4) { background-color: #FFFFE5; }
+.event:nth-child(5) { background-color: #FFE5FF; }
+.event:nth-child(6) { background-color: #E5FFFF; }
+
+/* Add this new style for the no events message */
+.no-events {
+    font-size: 1.25rem;
+    color: #ff0000;  /* Changed to red */
+    margin-top: 20px;
+    font-weight: bold;  /* Made bold */
+}
