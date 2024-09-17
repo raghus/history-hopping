@@ -77,3 +77,14 @@ button:hover {
     margin-top: 20px;
     font-weight: bold;  /* Made bold */
 }
+
+/* Update the media query at the end of the file */
+@media screen and (max-width: 768px) {
+    .odometer {
+        font-size: 3.5rem; /* Half the original size for mobile */
+    }
+
+    h1 {
+        font-size: 35px; /* Half the original size (70px) for mobile */
+    }
+}
